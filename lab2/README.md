@@ -33,9 +33,9 @@ The aim is to minimize the results of the fitness function.
 
 ## Experimental results
 
-The experimental results for the _Greedy (Best) First_ Algorithm are reported in the following table.
+The experimental results for the _Set Covering_ Algorithm are reported in the following table.
 
-| N | W(Cost) | Bloat | Population Size | Offspring size| Offspring size|
+| N | W(Cost) | Bloat | Population Size | Offspring size| Elapsed Time|
 | --| ------- | -------- |------------- | ----------- |  ----------- |
 |5 | 5 | 15 | 100% |3 | 0.003 s |
 | 10 | 10 | 100% | 2000 | 100 | 0.09 s|
