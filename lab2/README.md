@@ -52,4 +52,4 @@ Obviously, in this algorithm, the goodness of results depends in a non-negligibl
 
 ## Authors
 
-This code has been developed after discussing it with [Samuele Pino](https://github.com/samuelePino) 303332](https://github.com/samuelePino). However, our code is different.
+This code has been developed after discussing it with [Samuele Pino 303332](https://github.com/samuelePino). However, our code is different.
