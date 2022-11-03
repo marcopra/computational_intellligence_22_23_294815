@@ -38,7 +38,7 @@ The experimental results for the _Greedy (Best) First_ Algorithm are reported in
 | N | W(Cost) | Bloat | Population Size | Offspring size| Offspring size|
 | --| ------- | -------- |------------- | ----------- |  ----------- |
 |5 | 5 | 15 | 100% |3 | 0.003 s |
-| 10 | 100 | 100% | 2000 | 100 | 0.09 s|
+| 10 | 10 | 100% | 2000 | 100 | 0.09 s|
 |20|26| 130% |100000 | 1000 |17.6 s|
 |50|75| 150% |100000 | 1000 |18.0 s|
 |100|203| 203% |100000| 1000| 18.1 s|
