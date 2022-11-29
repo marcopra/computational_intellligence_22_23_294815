@@ -53,3 +53,7 @@ Obviously, in this algorithm, the goodness of results depends in a non-negligibl
 ## Authors
 
 This code has been developed after discussing it with [Samuele Pino 303332](https://github.com/samuelePino). However, our code is different.
+
+## Updates
+
+I added other tweaking strategies, such as cross-over, mutation + crossover and crossover + mutation.
