@@ -35,16 +35,16 @@ This strategy is based on Genetic Algorithm paradigms.
 
 ### Evolvable Strategy based on Fixed Rules
 
-This strategy is based on the [one](#fixed-rules) mentioned above. In this case, the parameters $\alpha$ and $\beta$ has been tuned. to achieve .
-The tuned parameters has been chosen to achive the best performances (highest win rate) over 100 matches against a pure random opponent and with a random value of $K$. The best values are $\alpha = 0.4$ e $\beta = 0.1$
+This strategy is based on the [one](#fixed-rules) mentioned above. In this case, the parameters $\alpha$ and $\beta$ had been tuned.
+The tuned parameters had been chosen to achieve the best performances (highest win rate) over 100 matches against a pure random opponent and with a random value of $K$. The best values are $\alpha = 0.4$ e $\beta = 0.1$
 
 ## Task 3.3 (*Min-Max Strategy*)
 
-This strategy is based on the _Min-Max_ algorithm. The implemented version of the algorithm (without a limited depth) is very slow, due to the high quantity of possible states. To make the algorthm faster, we implemented also the alpha-beta pruning to avoid considering non-necessary states. A possible improvement is the implementation of the limited depth.
+This strategy is based on the _Min-Max_ algorithm. The implemented version of the algorithm (without a limited depth) is very slow, due to the high quantity of possible states. To make the algorithm faster, we implemented also the alpha-beta pruning to avoid considering non-necessary states. A possible improvement is the implementation of the limited depth.
 
 ### Task 3.4 (*Reinforcement Learning Agent*)
 
-This strategy has been implemented accordingly to the Reinforcement Learning paradigms. In this case, a _State (S)_ is represented by the state of the _Nim Board_. The _Reward (R)_ of a _State_ corresponds to $+1$ if the _RL_ agent wins the game in that _State_, if the _RL_ agent loses is $-1$, otherwise is $0$. Please, note that for each _State (S)_ we computet the future discounted reward using:
+This strategy has been implemented accordingly to the Reinforcement Learning paradigms. In this case, a _State (S)_ is represented by the state of the _Nim Board_. The _Reward (R)_ of a _State_ corresponds to $+1$ if the _RL_ agent wins the game in that _State_, if the _RL_ agent loses is $-1$, otherwise is $0$. Please, note that for each _State (S)_ we compute the future discounted reward using:
 
 ```python
 for curr, reward in reversed(self.state_history):
@@ -53,12 +53,12 @@ for curr, reward in reversed(self.state_history):
     self.G[tuple(curr.rows)] += prev
 ```
 
-Each state is initialized acoordingly to a _Uniform_ distribution between $-1$ and $+1$. The policy $\pi$ aims to choose the new possible state with the maximum reward.
+Each state is initialized accordingly to a _Uniform_ distribution between $-1$ and $+1$. The policy $\pi$ aims to choose the new possible state with the maximum reward.
 The agent has been trained using a sort of domain randomization (DR). So, it has been trained over $10000$ Games on _Nim Boards_ with $1 \leq N Rows \leq 10$ and $1 \leq K \leq N Rows \lor K = None$.
 
 ## Results
 
-In the table below, we report the agent win ration over 100 matches using different strategies. In this case, the games are played on a _Nim_ board with 3 rows and $K = 3$. The left column represents the strategies used by the agent, while on the row at the top, we represents the strategy used by the opponet. Please note that the starting turn is equally distributes over the matches, so the agents and the opponent will do the first 50 times each. This is important since the first moving player as an advantage.
+In the table below, we report the agent win ratio over 100 matches using different strategies. In this case, the games are played on a _Nim_ board with 3 rows and $K = 3$. The left column represents the strategies used by the agent, while on the row at the top, we represent the strategy used by the opponent. Please note that the starting turn is equally distributed over the matches, so the agents and the opponent will do the first 50 times each. This is important since the first moving player has an advantage.
 
 | Agent\Opponent                                             | `pure_random` | `best_strategy` | `best_strategy_by_prof` | `evolvable_based_on_fixed_rules (alpha = 0.5, beta = 0.5)` | `evolvable_based_on_fixed_rules (alpha = 0.4, beta = 0.1)` | `evolvable_based_on_GA` | `evolvable_by_prof` | `min_max`     | `rl`          |
 |------------------------------------------------------------|---------------|-----------------|-------------------------|------------------------------------------------------------|------------------------------------------------------------|-------------------------|---------------------|---------------|---------------|
