@@ -42,7 +42,7 @@ The tuned parameters had been chosen to achieve the best performances (highest w
 
 This strategy is based on the _Min-Max_ algorithm. The implemented version of the algorithm (without a limited depth) is very slow, due to the high quantity of possible states. To make the algorithm faster, we implemented also the alpha-beta pruning to avoid considering non-necessary states. A possible improvement is the implementation of the limited depth.
 
-### Task 3.4 (*Reinforcement Learning Agent*)
+## Task 3.4 (*Reinforcement Learning Agent*)
 
 This strategy has been implemented accordingly to the Reinforcement Learning paradigms. In this case, a _State (S)_ is represented by the state of the _Nim Board_. The _Reward (R)_ of a _State_ corresponds to $+1$ if the _RL_ agent wins the game in that _State_, if the _RL_ agent loses is $-1$, otherwise is $0$. Please, note that for each _State (S)_ we compute the future discounted reward using:
 
