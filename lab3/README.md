@@ -19,7 +19,7 @@ The algorithm of the best possible strategy has been inspired by [*Nim*](https:/
 
 The fixed rules strategy is divided into two parts:
 
-* Early game strategy: this strategy is applied if and only if the remaining objects are more than $50%$ of the initial ones ($\alpha = 0.5$ in the algorithm) and if the active rows are more than $50%$ of the initial ones ($\beta = 0.5$ in the algorithm). In this strategy, the goal is to reduce as much as possible the longest row.
+* Early game strategy: this strategy is applied if and only if the remaining objects are more than 50% of the initial ones ( $\alpha = 0.5$ in the algorithm) and if the active rows are more than 50% of the initial ones ( $\beta = 0.5$ in the algorithm). In this strategy, the goal is to reduce as much as possible the longest row.
 * Late game strategy: this strategy is applied otherwise. In this strategy, the goal is to reduce as much as possible the longest row if the active rows are odd or to leave at least one element (or $K + 1$ elements) if the active rows are even.
 
 This strategy has been implemented in `evolvable_based_on_fixed_rules` function and it is performed using `alpha = 0.5` and `beta = 0.5`.
@@ -72,7 +72,7 @@ In the table below, we report the agent win ratio over 100 matches using differe
 | `min_max`                                                  | Not Evaluated | Not Evaluated   | Not Evaluated           | Not Evaluated                                              | Not Evaluated                                              | Not Evaluated           | Not Evaluated       | Not Evaluated | Not Evaluated |
 | `rl`                                                       | 98%           | 50%             | 50%                     | 50%                                                        | 100%                                                       | 96%                     | 51%                 | Not Evaluated | 50%           |
 
-Then, we report the results if using a random table ($1 \leq N Rows \leq 10$ and $1 \leq K \leq N Rows \lor K = None$) over the 100 matches played.
+Then, we report the results if using a random table ( $1 \leq N Rows \leq 10$ and $1 \leq K \leq N Rows \lor K = None$) over the 100 matches played.
 
 | Agent\Opponent                                             | `pure_random` | `best_strategy` | `best_strategy_by_prof` | `evolvable_based_on_fixed_rules (alpha = 0.5, beta = 0.5)` | `evolvable_based_on_fixed_rules (alpha = 0.4, beta = 0.1)` | `evolvable_based_on_GA` | `evolvable_by_prof` | `min_max`     | `rl`          |
 |------------------------------------------------------------|---------------|-----------------|-------------------------|------------------------------------------------------------|------------------------------------------------------------|-------------------------|---------------------|---------------|---------------|
